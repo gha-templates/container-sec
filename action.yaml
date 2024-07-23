@@ -1,0 +1,14 @@
+name: "Container Sec"
+description: "Build and Patch OS Vulnerable Images"
+inputs:
+  text:
+    description: 'The text to print'
+    required: true
+runs:
+  using: "composite"
+  steps:
+    - name: "Hello World"
+      run: |
+        echo "Hello World: ${{ inputs.text }}"
+      id: hello-world
+      shell: bash
